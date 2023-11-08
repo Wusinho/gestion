@@ -5,6 +5,7 @@
   <div>
 
     <% if user_signed_in? %>
+      <%= link_to 'My Projects', projects_path %>
       <%= link_to 'Log Out', logout_path %>
     <% else %>
       <%= link_to 'Register', registrations_path  %>

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   resources :registrations#, only: [:create]
   resources :sessions#, only: [:create]
+  resources :projects
   root "home_pages#index"
   get '/logout', to: 'sessions#destroy', as: :logout
 end
