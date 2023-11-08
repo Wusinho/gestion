@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'sessions/create'
-  get 'registrations/create'
-  get 'registration/create'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
+  resources :registrations#, only: [:create]
+  resources :sessions#, only: [:create]
   root "home_pages#index"
+  get '/logout', to: 'sessions#destroy', as: :logout
 end

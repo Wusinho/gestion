@@ -1,6 +1,15 @@
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="#">
-    <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-    Bootstrap
+    Gerencia
   </a>
+  <div>
+
+    <% if user_signed_in? %>
+      <%= link_to 'Log Out', logout_path %>
+    <% else %>
+      <%= link_to 'Register', registrations_path  %>
+      <%= link_to 'Log In', sessions_path  %>
+    <% end %>
+
+  </div>
 </nav>
