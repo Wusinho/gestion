@@ -1,0 +1,8 @@
+<div id="<%= dom_id(user) %>" class="card p-3" style="width: 18rem;" >
+  <%= user.name %>
+  <%= form_with model: ProjectParticipant.new, url: project_participants_path do |f| %>
+    <%= f.select :role, options_for_select(project_participant_roles(project_participant)) %>
+    <%= f.hidden_field :project_id, value: project_participant.project.id %>
+    <%= f.submit 'Invite' %>
+  <% end %>
+</div>

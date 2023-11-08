@@ -6,7 +6,9 @@ class ProjectsController < ApplicationController
   end
 
   def show
-
+    @project_participant = ProjectParticipant.find_by(user_id: current_user.id,
+                                              project_id: @project.id)
+    @users_emails = @project.missing_participants
   end
 
   def create

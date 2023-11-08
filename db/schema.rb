@@ -16,6 +16,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_08_021955) do
 
   create_table "project_participants", force: :cascade do |t|
     t.integer "role"
+    t.integer "status", default: 0
     t.bigint "user_id", null: false
     t.bigint "project_id", null: false
     t.datetime "created_at", null: false
