@@ -1,7 +1,12 @@
 class ProjectsController < ApplicationController
+  before_action :set_project, only: [:show]
   def index
     @project = Project.new
     @projects = current_user.projects
+  end
+
+  def show
+
   end
 
   def create
@@ -15,6 +20,10 @@ class ProjectsController < ApplicationController
   end
 
   private
+
+  def set_project
+    @project = Project.find(params[:id])
+  end
 
   def projects_params
     params.require(:project).permit(:title, :slug, :description).merge(user_id: current_user.id)

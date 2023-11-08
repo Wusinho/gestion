@@ -1,10 +1,12 @@
 <div>
+
   <div>
   <%= render 'form', project: @project %>
   </div>
+
   <div id="projects">
-  <% @projects.each do |project| %>
-    <%= render 'project', project:project %>
+    <% @projects.each do |project| %>
+      <%= render 'project', project:project %>
     <% end %>
   </div>
 </div>
