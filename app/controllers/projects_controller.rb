@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   before_action :set_project, only: [:show]
   def index
     @project = Project.new
-    @projects = current_user.projects
+    @project_participants = current_user.project_participants
   end
 
   def show
