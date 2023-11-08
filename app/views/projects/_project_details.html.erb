@@ -11,3 +11,17 @@
     <%= render 'user_invitation', user: user, project_participant: @project_participant  %>
   <% end %>
 </div>
+
+<div>
+  <h4>Participantes del curso</h4>
+  <div>
+    <% project.project_participants.each do |project_participant| %>
+      <% if project_participant.status == 'accepted'  %>
+      <div>
+        <%= project_participant.user.name %>
+        <%= project_participant.role %>
+      </div>
+        <% end %>
+    <%end %>
+  </div>
+</div>
