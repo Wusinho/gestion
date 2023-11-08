@@ -12,6 +12,9 @@
 
   <body>
     <%= render 'shared/navbar' %>
-    <%= yield %>
+    <%= turbo_frame_tag 'error_message' %>
+    <div class="mt-5 mx-3">
+      <%= yield %>
+    </div>
   </body>
 </html>

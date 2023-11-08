@@ -3,9 +3,9 @@ class SessionsController < ApplicationController
     user = find_user_by_email
     if user.present?
       session[:email] = user.email
-      redirect_to root_path, alert: t('alerts.messages.login_in')
+      redirect_to root_path
     else
-      redirect_to root_path, alert: t('alerts.messages.login_in')
+      turbo_message('User not Found')
     end
   end
 

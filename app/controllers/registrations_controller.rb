@@ -13,7 +13,7 @@ class RegistrationsController < ApplicationController
       session[:email] = @user.email
       redirect_to root_path
     else
-      render :new
+      turbo_error_message(@user)
     end
 
   end

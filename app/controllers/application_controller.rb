@@ -11,4 +11,15 @@ class ApplicationController < ActionController::Base
 
     @current_user ||= User.find_by(email: session[:email])
   end
+
+  def turbo_error_message(instance)
+    render turbo_stream: turbo_stream.replace('error_message', partial: 'shared/error_message',
+                                              locals: { message: instance.errors.full_messages.to_sentence })
+  end
+
+  def turbo_message(message)
+    render turbo_stream: turbo_stream.replace('error_message', partial: 'shared/error_message',
+                                              locals: { message: })
+  end
+
 end
