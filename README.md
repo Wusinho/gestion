@@ -8,12 +8,12 @@ Criterios de aceptación:
 - Valida la entrada de correo electrónico.
 - La autenticación debe ser sin contraseña (por correo electrónico).
 
-- Como usuario activo, quiero poder crear varios proyectos para poder enfocar mis tareas en un tema común.
+ Como usuario activo, quiero poder crear varios proyectos para poder enfocar mis tareas en un tema común.
     - Esta es una aplicación multiinquilino, lo que significa que puedo crear múltiples proyectos e invitar a otros usuarios a unirse a ellos.
     - El proyecto debe tener atributos de título, slug, descripción y estado.
     - El rol del usuario que crea el proyecto es Propietario.
 
-- Como usuario activo, quiero ver una lista de proyectos de los que soy miembro.
+ Como usuario activo, quiero ver una lista de proyectos de los que soy miembro.
     - Los usuarios deben tener y pertenecer a muchos proyectos.
     - Los usuarios deben tener un rol dentro de un proyecto; los roles son propietario, administrador, miembro.
     - El propietario y el administrador pueden invitar a más usuarios por correo electrónico.
@@ -27,7 +27,14 @@ Para el desarrollo del proyecto se utilizaron las siguientes herramientas:
 - Postgresql
 - Bootstrap v 5.1.3
 
-## Cómo iniciar el proyecto
+## Mejoras Propuestas para el Proyecto
+- Optimización de consultas a la base de datos para mejorar el rendimiento.
+- Enriquecimiento de la interfaz de usuario para una mejor experiencia.
+- Implementación de pruebas automatizadas para asegurar la calidad del software.
+- Redirección automática para usuarios no autenticados a la pantalla de inicio de sesión.
+- Los requisitos básicos del proyecto se han cumplido satisfactoriamente.
+
+## Cómo iniciar el Proyecto
 
 - Abre tu terminal y navega al directorio donde deseas almacenar el proyecto.
 - Ejecuta el siguiente comando en la terminal:
