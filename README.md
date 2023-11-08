@@ -1,24 +1,58 @@
-# README
+# Proyecto Gestión
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Objetivos
 
-Things you may want to cover:
+Criterios de aceptación:
+- La aplicación necesita mi nombre, nombre de usuario y correo electrónico.
+- No se permiten correos electrónicos duplicados.
+- Valida la entrada de correo electrónico.
+- La autenticación debe ser sin contraseña (por correo electrónico).
 
-* Ruby version
+- Como usuario activo, quiero poder crear varios proyectos para poder enfocar mis tareas en un tema común.
+    - Esta es una aplicación multiinquilino, lo que significa que puedo crear múltiples proyectos e invitar a otros usuarios a unirse a ellos.
+    - El proyecto debe tener atributos de título, slug, descripción y estado.
+    - El rol del usuario que crea el proyecto es Propietario.
 
-* System dependencies
+- Como usuario activo, quiero ver una lista de proyectos de los que soy miembro.
+    - Los usuarios deben tener y pertenecer a muchos proyectos.
+    - Los usuarios deben tener un rol dentro de un proyecto; los roles son propietario, administrador, miembro.
+    - El propietario y el administrador pueden invitar a más usuarios por correo electrónico.
 
-* Configuration
+## Descripción del Proyecto
 
-* Database creation
+Para el desarrollo del proyecto se utilizaron las siguientes herramientas:
 
-* Database initialization
+- Rails v 7.0.8
+- Ruby 3.1.2
+- Postgresql
+- Bootstrap v 5.1.3
 
-* How to run the test suite
+## Cómo iniciar el proyecto
 
-* Services (job queues, cache servers, search engines, etc.)
+- Abre tu terminal y navega al directorio donde deseas almacenar el proyecto.
+- Ejecuta el siguiente comando en la terminal:
 
-* Deployment instructions
+```bash
+git clone https://github.com/Wusinho/gestion.git
+```
 
-* ...
+- Cd en el folder que se creo
+- Ejecuta $ `bundle install`
+- En la terminal, escribe  $ `rails db:create && rails db:migrate && rails db:seed`
+- En la terminal, escribe  $ `rails server`
+
+## Autor
+
+👤 **Heber Lazo**
+
+- Github: [@Wusinho](https://github.com/Wusinho)
+- LinkedIn: [Heber Lazo](https://www.linkedin.com/in/heber-lazo-benza-523266133/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## Show your support
+
+Give a star if you :star: like this project!
+
