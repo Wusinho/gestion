@@ -2,7 +2,8 @@ class Project < ApplicationRecord
   has_many :project_participants
   has_many :users, through: :project_participants
   belongs_to :propietario, class_name: 'User', foreign_key: :user_id
-  validates_presence_of :title, :status
+  validates_presence_of :title, :status, :slug
+  validates_uniqueness_of :slug
 
   enum status: { active: 0, closed: 1, hold: 2 }
 
